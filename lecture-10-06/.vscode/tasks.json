@@ -13,7 +13,8 @@
                 "mywrite.s",
                 "chrono.c",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-static"
             ],
             "options": {
                 "cwd": "${fileDirname}"

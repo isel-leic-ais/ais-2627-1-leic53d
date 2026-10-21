@@ -4,6 +4,7 @@
 #include "chrono.h"
 #include <errno.h>
 
+#define ERROR_CHECKING 
 /**
  * this program tests the implementation
  * of our old int version of system call write (my_write)
@@ -17,12 +18,14 @@ int  main() {
 	
 	printf("message address = %p\n", msg);
 	int res = mywrite_32(STDOUT_FILENO, msg, 13);
+#ifdef ERROR_CHECKING
 	if (res <0) {
 		errno = -res;
 		res = -1;
 		perror("write error");
 		return 1;
 	} 
+#endif
 	printf("%d bytes written\n", res);
 	return 0;
 }
