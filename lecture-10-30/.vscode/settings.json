@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/isel/src/tvs/26-27/aulas/ais-2627-1-leic53d/lecture-10-30",
+            "binaryPath": "/home/isel/src/tvs/26-27/aulas/ais-2627-1-leic53d/lecture-10-30/client",
+            "binaryArgs": []
+        }
+    ]
+}

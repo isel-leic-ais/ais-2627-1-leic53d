@@ -14,6 +14,8 @@
 
 
 int main(int argc, char *argv[]) {
+    
+    printf("my pid is %d\n", getpid());
 	 
 	const int FILE_SIZE = NUMBERS_COUNT*sizeof(int);
 
@@ -44,10 +46,12 @@ int main(int argc, char *argv[]) {
 	int *ints = (int *) mapbase;
 	
 	for(int i=0; i < NUMBERS_COUNT; ++i) {
-		printf("i=%d\n", i);
+		//printf("i=%d\n", i);
 		ints[i] = i;
 	}
 	
+    printf("Press enter to continue...\n");
+    getchar(); 
 	
 	if (munmap(mapbase, FILE_SIZE) == -1) {
 		perror("error unmapping numbers file");

@@ -22,7 +22,7 @@ void  suspend(char *msg) {
 
 int main(int argc, char *argv[]) {
 	printf("my pid is %d\n", getpid());
-	int fd = open(INTS_FILENAME, O_RDONLY);
+	int fd = open(INTS_FILENAME, O_RDWR);
 	
 	suspend("start!");
 	if (fd < 0) {
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 	
 	// DO MAP 
 	// testar com MAP_SHARED e MAP_PRIVATE
-	void *mapbase = mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);
+	void *mapbase = mmap(NULL, size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 	
 	if (mapbase == MAP_FAILED) {
 		perror("error mapping numbers file");
@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
 	suspend("after file show");
 	
 	// uncomment next line and refactor the code acordingly
-	//ints[NUMBERS_COUNT-1] = 1;
+	ints[NUMBERS_COUNT-1] = 1;
 	
 	printf("ints[NUMBERS_COUNT-1] = %d\n", ints[NUMBERS_COUNT-1] );
 	
