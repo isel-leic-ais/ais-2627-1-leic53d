@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/isel/src/tvs/26-27/staging/lecture-11-12/echo_services/echo_uds",
+            "binaryPath": "/home/isel/src/tvs/26-27/staging/lecture-11-12/echo_services/echo_uds/echo_cli",
+            "binaryArgs": []
+        }
+    ]
+}

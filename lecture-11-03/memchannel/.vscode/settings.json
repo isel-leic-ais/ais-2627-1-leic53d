@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "stdatomic.h": "c",
+        "string.h": "c",
+        "chrono": "c",
+        "time.h": "c"
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/isel/src/tvs/26-27/staging/lecture-11-12/memchannel",
+            "binaryPath": "/home/isel/src/tvs/26-27/staging/lecture-11-12/memchannel/mc_test",
+            "binaryArgs": []
+        }
+    ]
+}
